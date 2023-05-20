@@ -1,0 +1,199 @@
+/* Google Fonts - Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header-out {
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 25px;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-primary-out);
+}
+
+.form {
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: var(--color-background-secondary-out);
+  box-shadow: 0 2rem 4rem var(--color-box-shadow);
+}
+
+.form.login {
+  display: block;
+}
+.form.signup {
+  display: none;
+}
+.forms.show-signup .form.login {
+  display: none;
+}
+.forms.show-signup .form.signup {
+  display: block;
+}
+
+header {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+}
+
+form {
+  margin-top: 30px;
+}
+
+form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.field input {
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid #cacaca;
+}
+
+.field input:focus {
+  border-bottom-width: 3px;
+  border-bottom-color: var(--color-background-tertiary-out);
+}
+
+.field button {
+  background-color: var(--color-background-tertiary-out);
+  color: var(--color-primary-out);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.field button:hover {
+  background-color: var(--color-button-background-out);
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-link span,
+.form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #232836;
+}
+
+.form a {
+  color: var(--color-background-tertiary-out);
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.invalid input {
+  border-color: var(--color-error-out);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  color: var(--color-error-out);
+  font-size: 13px;
+  display: none;
+}
+
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+
+.password-field .error {
+  align-items: flex-start;
+}
+
+.password-field .error-icon {
+  margin-top: 4px;
+}
+
+.invalid .error {
+  display: flex;
+}
+
+/* Style for the fake loading popup */
+#loading-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-box-shadow);
+  z-index: 9999;
+}
+#loading-spinner {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid var(--color-background-primary-out);
+  border-top-color: var(--color-spinner-out);
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form {
+    padding: 15px 10px;
+  }
+}

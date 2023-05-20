@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/sudoku-icon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css" />
+    <script type="module" src="./src/Game/GameBoardsController.js"></script>
+    <title>Sudoku Game</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <h1 class="header">
+        Sudoku Game
+        <span class="user-name"></span>
+      </h1>
+      <button class="logout-btn">Log out</button>
+    </header>
+    <div class="init">
+      <p class="instruction-1">
+        If you can't solve the puzzle Click the
+        <span class="decorator-button">Solve</span>
+        button to see the solution.
+      </p>
+      <p class="instruction-2">
+        For the New game just click the
+        <span class="decorator-button">New Game</span>
+        button.
+      </p>
+      <p class="instruction-3">
+        You get one <span class="error">Error</span> for each incorrect number.
+        If the number of errors reaches 3 you lose the Game.
+      </p>
+      <p class="instruction-4">
+        And also You have <span class="decorator-button">10 minutes</span> for
+        Solving the puzzle.
+      </p>
+      <p class="instruction-5">
+        At the end, once you've completed the entire game board, you'll see
+        whether you've solved the puzzle or not.
+      </p>
+      <button type="button" class="new-board-btn">Game Board</button>
+    </div>
+    <div class="game-section"></div>
+    <div class="post first-post">
+      <h2 class="entry-title">About Sudoku</h2>
+      <div class="entry-content">
+        <p class="entry-paragrpah">
+          The popular Japanese puzzle game Sudoku is based on a logical
+          arrangement of numbers.<br />
+          Sudoku is an online logic game that does not require calculations or
+          special mathematical skills.<br />
+          All you need is your brain and the ability to focus.
+        </p>
+      </div>
+    </div>
+    <div class="post second-post">
+      <h2 class="entry-title">How to play Sudoku</h2>
+      <div class="entry-content">
+        <p class="entry-paragraph">
+          The goal of Sudoku is to fill a 9x9 grid with numbers so that each
+          column, row, and 3x3 grid has numbers from 1 to 9.<br />
+          At the beginning of the game, some cells of the 9x9 grid will be
+          filled.<br />
+          Your task is to fill in the missing numbers and fill in the entire
+          grid using logic. Remember, the move will be invalid if:
+        </p>
+        <ul>
+          <li>Any string contains duplicate numbers from 1 to 9</li>
+          <li>Any column contains duplicate numbers from 1 to 9</li>
+          <li>Any 3x3 grid contains duplicate numbers from 1 to 9</li>
+        </ul>
+      </div>
+    </div>
+    <div class="popup hidden">
+      <button class="popup-button">&times;</button>
+      <h4 class="popup-content"></h4>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- Fake loading popup -->
+    <div id="loading-popup">
+      <div id="loading-spinner"></div>
+    </div>
+  </body>
+</html>

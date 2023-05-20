@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/login-.png" />
+    <link rel="stylesheet" href="./css/signupLogin.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css" />
+    <script type="module" src="./src/auth/signupAndLogin.js"></script>
+    <title>Sudoku Game: Login And Sign Up</title>
+  </head>
+  <body>
+    <div class="header-out">Sudoku Game</div>
+    <section class="container forms">
+      <!-- Login Form -->
+      <div class="form login">
+        <div class="form-content">
+          <header>Login</header>
+
+          <form action="#" class="login-form">
+            <div class="login-email-field">
+              <div class="field input-field">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="input email-login"
+                />
+              </div>
+              <span class="error email-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text error-text-email">
+                  Please enter a valid email
+                </p>
+              </span>
+            </div>
+            <div class="login-password-field">
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="password password-login"
+                />
+                <i class="bx bx-hide eye-icon"></i>
+                <span class="error password-error">
+                  <i class="bx bx-error-circle error-icon"></i>
+                  <p class="error-text error-text-password">
+                    Sorry, your password was inccorect.
+                  </p>
+                </span>
+              </div>
+            </div>
+            <div class="form-link">
+              <a href="#" class="forgot-pass"> Forgot password? </a>
+            </div>
+            <div class="field button-field">
+              <button>Login</button>
+            </div>
+            <div class="form-link">
+              <span>Don't have an account?</span>
+              <a href="#" class="link signup-link"> Signup </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Fake loading popup -->
+      <div id="loading-popup">
+        <div id="loading-spinner"></div>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form signup">
+        <div class="form-content">
+          <header>Signup</header>
+
+          <form action="#" class="signup-form">
+            <div class="username-field">
+              <div class="field input-field">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  class="input username"
+                />
+              </div>
+              <span class="error username-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">Please write your Username</p>
+              </span>
+            </div>
+            <div class="email-field">
+              <div class="field input-field">
+                <input
+                  type="email"
+                  placeholder="Enter your Email"
+                  class="input email"
+                />
+              </div>
+              <span class="error email-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">Please enter a valid email</p>
+              </span>
+            </div>
+            <div class="password-field">
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Create password"
+                  class="password"
+                />
+                <i class="bx bx-hide eye-icon"></i>
+              </div>
+              <span class="error password-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">
+                  Please enter atleast 8 character with number, symbol, capital
+                  and small letter.
+                </p>
+              </span>
+            </div>
+            <div class="confirm-password-field">
+              <div class="field input-field">
+                <input
+                  type="password"
+                  placeholder="Confirm password"
+                  class="cPassword password"
+                />
+                <i class="bx bx-hide eye-icon"></i>
+              </div>
+              <span class="error cPassword-error">
+                <i class="bx bx-error-circle error-icon"></i>
+                <p class="error-text">Password don't match</p>
+              </span>
+            </div>
+            <div class="field button-field">
+              <button>Signup</button>
+            </div>
+            <div class="form-link">
+              <span>Already have an account?</span>
+              <a href="#" class="link login-link"> Login </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup -->
+    <div class="popup hidden">
+      <button class="popup-button">&times;</button>
+      <h4 class="popup-content"></h4>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
